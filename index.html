@@ -1,89 +1,205 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <title>Fumika Kato</title>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        body{
+
+        *{
             margin:0;
-            background:linear-gradient(180deg,#fff8fb,#f5f9ff);
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        html{
+            scroll-behavior:smooth;
+        }
+
+        body{
+            background:linear-gradient(180deg,#fff8fb,#f7fbff);
             font-family:"M PLUS Rounded 1c",sans-serif;
             color:#555;
         }
 
-        .container{
-            width:80%;
-            max-width:900px;
-            margin:80px auto;
+        /* ---------------- ナビゲーション ---------------- */
+
+        nav{
+
+            position:sticky;
+            top:0;
+            z-index:1000;
+
             background:white;
-            border-radius:25px;
+            box-shadow:0 2px 15px rgba(0,0,0,.08);
+
+            padding:15px;
+        }
+
+        nav ul{
+
+            display:flex;
+            justify-content:center;
+            list-style:none;
+        }
+
+        nav li{
+
+            margin:0 15px;
+        }
+
+        nav a{
+
+            text-decoration:none;
+            color:#666;
+
+            padding:10px 18px;
+
+            border-radius:30px;
+
+            transition:.3s;
+
+            font-weight:bold;
+        }
+
+        nav a:hover{
+
+            background:#ffe4ee;
+            color:#ff6b9d;
+        }
+
+        /* ---------------- コンテンツ ---------------- */
+
+        .container{
+
+            width:85%;
+            max-width:900px;
+
+            margin:60px auto;
+
+            background:white;
+
+            border-radius:30px;
+
             padding:50px;
-            box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
             text-align:center;
+
+            box-shadow:0 10px 35px rgba(0,0,0,.08);
+
+            transition:.3s;
+        }
+
+        .container:hover{
+
+            transform:translateY(-5px);
         }
 
         img{
+
             width:180px;
             height:180px;
-            border-radius:50%;
+
             object-fit:cover;
-            border:6px solid #ffe0ec;
+
+            border-radius:50%;
+
+            border:6px solid #ffd6e5;
+
             margin-bottom:25px;
         }
 
         h1{
+
+            color:#ff78a5;
+
             font-size:48px;
-            color:#ff7aa2;
+
             margin-bottom:10px;
         }
 
         h2{
+
             color:#888;
-            font-weight:normal;
-            margin-top:0;
+
+            margin-bottom:20px;
         }
 
         p{
+
+            line-height:2;
+
             font-size:18px;
-            line-height:1.8;
         }
 
+        /* ---------------- ボタン ---------------- */
+
         .button{
+
             display:inline-block;
+
             margin-top:30px;
+
             padding:12px 30px;
-            background:#ffb6c1;
+
+            background:#ffb8cd;
+
             color:white;
+
+            border-radius:40px;
+
             text-decoration:none;
-            border-radius:50px;
+
             transition:.3s;
-            font-weight:bold;
         }
 
         .button:hover{
-            background:#ff8fb1;
-            transform:translateY(-3px);
+
+            background:#ff8eb1;
+
+            transform:scale(1.05);
         }
+
+        /* ---------------- カード ---------------- */
 
         .card{
-            margin-top:50px;
+
+            margin-top:40px;
+
             background:#fff7fa;
-            border-radius:20px;
-            padding:25px;
+
+            border-radius:25px;
+
+            padding:30px;
+
+            transition:.3s;
         }
 
-        ul{
-            list-style:none;
-            padding:0;
+        .card:hover{
+
+            transform:translateY(-5px);
+
+            box-shadow:0 8px 20px rgba(0,0,0,.08);
         }
 
-        li{
-            margin:10px 0;
-            font-size:18px;
+        .card h2{
+
+            color:#ff78a5;
+
+            margin-bottom:15px;
+        }
+
+        footer{
+
+            text-align:center;
+
+            padding:30px;
+
+            color:#888;
         }
 
     </style>
@@ -92,10 +208,25 @@
 
 <body>
 
-<div class="container">
+<nav>
 
-    <!-- 自分の写真 -->
-    <img src="profile.jpg" alt="プロフィール写真">
+    <ul>
+
+        <li><a href="#home">🏠 Home</a></li>
+
+        <li><a href="#about">👤 About</a></li>
+
+        <li><a href="#research">🔬 Research</a></li>
+
+        <li><a href="#publications">📄 Publications</a></li>
+
+        <li><a href="#contact">📧 Contact</a></li>
+
+    </ul>
+
+</nav>
+
+<div class="container" id="home">
 
     <h1>加藤 郁花</h1>
 
@@ -103,26 +234,79 @@
 
     <p>
         横浜国立大学<br>
-        森研究室　学部4年
+        森研究室 学部4年
     </p>
 
-    <a href="mailto:example@example.com" class="button">
+    <a class="button" href="mailto:example@example.com">
+
         Contact
+
     </a>
-
-    <div class="card">
-
-        <h2>Research</h2>
-
-        <p>
-            Large Language Model<br>
-            Jailbreak Attack<br>
-            AI Safety
-        </p>
-
-    </div>
 
 </div>
 
+<div class="container card" id="about">
+
+    <h2>👤 About</h2>
+
+    <p>
+
+        横浜国立大学 理工学部<br>
+
+        森研究室所属<br>
+
+        Large Language Model・AI Safetyを研究しています。
+
+    </p>
+
+</div>
+
+<div class="container card" id="research">
+
+    <h2>🔬 Research</h2>
+
+    <p>
+
+        ・Large Language Models<br>
+
+        ・Jailbreak Attack<br>
+
+        ・AI Safety
+
+    </p>
+
+</div>
+
+<div class="container card" id="publications">
+
+    <h2>📄 Publications</h2>
+
+    <p>
+
+        Coming Soon...
+
+    </p>
+
+</div>
+
+<div class="container card" id="contact">
+
+    <h2>📧 Contact</h2>
+
+    <p>
+
+        kato-fumika-dt@ynu.jp
+
+    </p>
+
+</div>
+
+<footer>
+
+    © 2026 Fumika Kato
+
+</footer>
+
 </body>
+
 </html>
